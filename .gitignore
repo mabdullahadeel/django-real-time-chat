@@ -3,12 +3,14 @@
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
+# custom git IGNORES
+src/frontend/react/node_modules
+env/
+
 # Node artifact files
 node_modules/
 dist/
 
-# Compiled Java class files
-*.class
 
 # Compiled Python bytecode
 *.py[cod]
