@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Css/chat.css';
 
-function ChatArea() {
+function ChatArea({ oldMessages, username, currentSocket }) {
+    const [message, setMessage] = useState('');
+    const [newMessages, setNewMessages] = useState([]);
+
+    const sendMessage = () => {
+        if (message) {
+            currentSocket.send(JSON.stringify({
+                'message': message,
+                'command': 'new_message',
+                'from': username
+            }));
+            setMessage('')
+        } else {
+            return
+        }
+    }
+
+    currentSocket.onmessage = function (e) {
+        const data = JSON.parse(e.data);
+        if (data['command'] === 'new_message') {
+            console.log(data);
+            setNewMessages(newMessages => newMessages.push(data['message']))
+        }
+    }
+
+
     return (
         <>
             <div className="content">
@@ -25,14 +50,34 @@ function ChatArea() {
                             <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
                             <p>When you're backed against the wall, break the god damn thing down.</p>
                         </li>
+                        {oldMessages.map((message) => (
+                            <li className={message.author === username ? "replies" : "sent"}>
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>{message.content}</p>
+                            </li>
+                        ))}
+                        {newMessages && newMessages.map(() => (
+                            <li className={message.author === username ? "replies" : "sent"}>
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>{message.content}</p>
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div className="message-input">
                     <div className="wrap">
-                        <input id="chat-message-input" type="text" placeholder="Write your message..." />
+                        <input
+                            value={message}
+                            onChange={(e) => {
+                                setMessage(e.target.value)
+                            }}
+                            id="chat-message-input" type="text" placeholder="Write your message..." />
                         <i className="fa fa-paperclip attachment" aria-hidden="true"></i>
-                        <button id="chat-message-submit" className="submit"><i className="fa fa-paper-plane"
-                            aria-hidden="true"></i></button>
+                        <button
+                            onClick={sendMessage}
+                            id="chat-message-submit" className="submit"><i className="fa fa-paper-plane"
+                                aria-hidden="true"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -41,4 +86,4 @@ function ChatArea() {
     )
 }
 
-export default ChatArea
+export default ChatArea;

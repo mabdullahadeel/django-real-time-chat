@@ -46,7 +46,10 @@ INSTALLED_APPS = [
     # Custom Apps
     'chat.apps.ChatConfig',
     'frontend.apps.FrontendConfig',
+    'profiles.apps.ProfilesConfig',
 ]
+
+AUTH_USER_MODEL = 'auth.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -89,7 +92,6 @@ CHANNEL_LAYERS = {
     },
 }
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -99,7 +101,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -140,5 +141,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, '/frontend/static')
+    os.path.join(BASE_DIR, 'frontend/static')
 ]
+# Serving the static files from a single source folder
+STATIC_ROOT = os.path.join(os.path.dirname(
+    BASE_DIR), 'static_cdn', 'static_root')
+
+# Media Files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(
+    BASE_DIR), 'static_cdn', 'media_root')
