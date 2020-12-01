@@ -24,7 +24,7 @@ function App() {
 
     useEffect(() => {
         socket.current.onopen = function (e) {
-            console.log("WebSocket Opened Succeddfully...")
+            console.log("WebSocket Opened Successfully...")
             fetchMessage();
         }
 

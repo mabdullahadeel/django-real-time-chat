@@ -1,28 +1,68 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../Css/chat.css';
 
 function ChatArea({ oldMessages, username, currentSocket }) {
-    const [message, setMessage] = useState('');
-    const [newMessages, setNewMessages] = useState([]);
+    const message = useRef('')
+
+    console.log("Rendered Again");
 
     const sendMessage = () => {
-        if (message) {
+        if (message.current) {
             currentSocket.send(JSON.stringify({
-                'message': message,
+                'message': message.current,
                 'command': 'new_message',
                 'from': username
             }));
-            setMessage('')
+            message.current = '';
+            document.getElementById("chat-message-input").value = "";
         } else {
             return
         }
+    }
+
+    function enterEvent(event) {
+        if (event.keyCode == 13) {
+            sendMessage()
+            return
+        }
+    }
+
+    function addEnterEventListner() {
+        console.log("Adding Listner");
+        window.addEventListener("keyup", enterEvent)
+    }
+
+    function userLeftInput() {
+        console.log('User Left the input');
+        window.removeEventListener("keyup", enterEvent);
     }
 
     currentSocket.onmessage = function (e) {
         const data = JSON.parse(e.data);
         if (data['command'] === 'new_message') {
             console.log(data);
-            setNewMessages(newMessages => newMessages.push(data['message']))
+
+            const author = data.message.author;
+            const msgTagList = document.createElement('li');
+            const imageTag = document.createElement('img');
+            const pTag = document.createElement('p');
+            pTag.textContent = data.message.content;
+            imageTag.src = 'http://emilcarlsson.se/assets/mikeross.png';
+
+            console.log(author, username)
+
+            if (author === username) {
+                msgTagList.className = 'replies';
+            } else {
+                msgTagList.className = 'sent';
+            }
+
+            msgTagList.appendChild(imageTag);
+            msgTagList.appendChild(pTag);
+
+            document.querySelector('#chat-log').appendChild(msgTagList);
+
+            $(".messages").animate({ scrollTop: $(document).height() }, "fast");
         }
     }
 
@@ -56,22 +96,17 @@ function ChatArea({ oldMessages, username, currentSocket }) {
                                 <p>{message.content}</p>
                             </li>
                         ))}
-                        {newMessages && newMessages.map(() => (
-                            <li className={message.author === username ? "replies" : "sent"}>
-                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                                <p>{message.content}</p>
-                            </li>
-                        ))}
                     </ul>
                 </div>
                 <div className="message-input">
                     <div className="wrap">
                         <input
-                            value={message}
+                            onFocus={addEnterEventListner}
+                            onBlur={userLeftInput}
                             onChange={(e) => {
-                                setMessage(e.target.value)
+                                message.current = e.target.value
                             }}
-                            id="chat-message-input" type="text" placeholder="Write your message..." />
+                            id="chat-message-input" type="textarea" placeholder="Write your message..." />
                         <i className="fa fa-paperclip attachment" aria-hidden="true"></i>
                         <button
                             onClick={sendMessage}
