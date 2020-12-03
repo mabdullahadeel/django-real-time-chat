@@ -42,11 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Third-party apps
+    'rest_framework',
+
 
     # Custom Apps
     'chat.apps.ChatConfig',
     'frontend.apps.FrontendConfig',
     'profiles.apps.ProfilesConfig',
+    'groups.apps.GroupsConfig',
 ]
 
 AUTH_USER_MODEL = 'auth.User'

@@ -8,6 +8,9 @@ urlpatterns = [
 
     # Custom Paths
     path('chat/', include('frontend.urls')),
+
+    # api paths
+    path('api/groups/', include('groups.api.urls')),
 ]
 
 # Static Files Configurations (python manage.py collectstatic)
