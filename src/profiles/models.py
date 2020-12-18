@@ -11,8 +11,8 @@ class ProfileManager(models.Manager):
 class Profile(models.Model):
     first_name = models.CharField(max_length=200, blank=True)
     last_name = models.CharField(max_length=200, blank=True)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL,
-                             on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL,
+                                on_delete=models.CASCADE, related_name="user")
     email = models.EmailField(max_length=200, blank=True)
     country = models.CharField(max_length=100, blank=True)
 
@@ -30,7 +30,7 @@ class Profile(models.Model):
     # Extending the quryset Potential
     objects = ProfileManager()
 
-    # peventing the over-ridinf of slug field at the profile edits
+    # peventing the over-riding of slug field at the profile edits
     __initial__first_name = None
     __initial__last_name = None
 
@@ -44,11 +44,11 @@ class Profile(models.Model):
         if self.first_name != self.__initial__first_name or self.last_name != self.__initial__last_name:
             if self.first_name and self.last_name:
                 to_slug = slugify(str(self.first_name + " " + self.last_name))
-                is_exist = Profile.objects.filter(slug=to_slug).exist()
+                is_exist = Profile.objects.filter(slug=to_slug).exists()
                 while is_exist:
                     # append a random number until unique slug
                     to_slug = slugify(to_slug + " " + str(get_random_number()))
-                    is_exist = Profile.objects.filter(slug=to_slug).exist()
+                    is_exist = Profile.objects.filter(slug=to_slug).exists()
         else:
             to_slug = str(self.user)
 
@@ -56,7 +56,7 @@ class Profile(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"{self.user.username} | {self.first_name} {self.last_name} | {self.created.strftime('%d-%m-%Y')}"
+        return f"{self.user.username} | {self.first_name} - {self.last_name} | {self.created.strftime('%d-%m-%Y')}"
 
 
 STATUS_CHOICES = (

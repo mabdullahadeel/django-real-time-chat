@@ -13,7 +13,7 @@ from rest_framework.permissions import IsAuthenticated
 class GroupList(APIView):
 
     """
-        Get all the groups
+        Get all the groups of the current loggedin user
     """
 
     authentication_classes = [SessionAuthentication, BasicAuthentication]
@@ -22,7 +22,7 @@ class GroupList(APIView):
     def get(self, request, format=None):
         # groups = Group.objects.all()
         groups = Group.objects.get_groups_of_user(
-            username=request.user.username)
+            user=request.user)
         serializer = GroupSerializer(groups, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
@@ -67,7 +67,7 @@ class GroupDetail(APIView):
 
     def delete(self, request, pk, format=None):
         group = self.get_object(pk=pk)
-        if group.get_creator(pk=pk, username=request.user.username):
+        if group.is_creator(pk=pk, username=request.user.username):
             group.delete()          # Only the user created the group can delete it
             return Response(status=status.HTTP_204_NO_CONTENT)
 

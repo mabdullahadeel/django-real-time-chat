@@ -3,20 +3,32 @@ import React, { useEffect, useState, useRef } from 'react';
 import Sidebar from './components/Sidebar';
 import ChatArea from './components/ChatArea';
 import './Css/chat.css';
+import axios from 'axios';
 
 function App() {
     const [oldMessages, setOldMessages] = useState([]);
 
     const socket = useRef({})
-    const roomName = JSON.parse(document.getElementById('room_name').textContent)
+    const roomName = "you";
     const username = JSON.parse(document.getElementById('username').textContent)
 
     useEffect(() => {
+        function getGroups() {
+            axios.get("http://localhost:8000/api/groups/")
+                .then(response => {
+                    const groups = response.data;
+                    groups.forEach((group) => console.log(group))
+                })
+                .catch(err => console.log(err))
+        }
+        getGroups()
+    })
 
+    useEffect(() => {
         socket.current = new WebSocket(
             'ws://'
             + window.location.host
-            + '/ws/chat/'
+            + '/ws/chat/group/'
             + roomName
             + '/'
         );
@@ -25,7 +37,7 @@ function App() {
     useEffect(() => {
         socket.current.onopen = function (e) {
             console.log("WebSocket Opened Successfully...")
-            fetchMessage();
+            // fetchMessage();
         }
 
         socket.current.onclose = function (e) {

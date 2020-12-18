@@ -4,8 +4,6 @@ import '../Css/chat.css';
 function ChatArea({ oldMessages, username, currentSocket }) {
     const message = useRef('')
 
-    console.log("Rendered Again");
-
     const sendMessage = () => {
         if (message.current) {
             currentSocket.send(JSON.stringify({
