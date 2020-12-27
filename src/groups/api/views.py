@@ -20,7 +20,6 @@ class GroupList(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, format=None):
-        # groups = Group.objects.all()
         groups = Group.objects.get_groups_of_user(
             user=request.user)
         serializer = GroupSerializer(groups, many=True)
@@ -44,14 +43,14 @@ class GroupDetail(APIView):
     authentication_classes = [SessionAuthentication, BasicAuthentication]
     permission_classes = [IsAuthenticated]
 
-    def get_object(self, pk):
+    def get_object(self, slug):
         try:
-            return Group.objects.get(pk=pk)
+            return Group.objects.get(slug=slug)
         except Group.DoesNotExist:
             raise Http404
 
-    def get(self, request, pk, format=None):
-        group = self.get_object(pk=pk)
+    def get(self, request, slug, format=None):
+        group = self.get_object(slug=slug)
         serializer = GroupSerializer(group)
 
         return Response(serializer.data)
@@ -67,7 +66,7 @@ class GroupDetail(APIView):
 
     def delete(self, request, pk, format=None):
         group = self.get_object(pk=pk)
-        if group.is_creator(pk=pk, username=request.user.username):
+        if group.is_creator(slug=group.slug, username=request.user.username):
             group.delete()          # Only the user created the group can delete it
             return Response(status=status.HTTP_204_NO_CONTENT)
 

@@ -6,5 +6,5 @@ from rest_framework import routers
 
 urlpatterns = [
     path('', views.GroupList.as_view(), name="api-groups"),
-    path('<int:pk>/', views.GroupDetail.as_view(), name="api-group-detail"),
+    path('<str:slug>/', views.GroupDetail.as_view(), name="api-group-detail"),
 ]

@@ -13,9 +13,11 @@ src/db.sqlite3
 node_modules/
 dist/
 
+*.sqlite3
 
 # Compiled Python bytecode
 *.py[cod]
+*.pyc
 
 # Log files
 *.log

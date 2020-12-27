@@ -9,12 +9,12 @@ function App() {
     const [oldMessages, setOldMessages] = useState([]);
 
     const socket = useRef({})
-    const roomName = "you";
     const username = JSON.parse(document.getElementById('username').textContent)
+    const slug = JSON.parse(document.getElementById('slug').textContent)
 
     useEffect(() => {
         function getGroups() {
-            axios.get("http://localhost:8000/api/groups/")
+            axios.get("http://127.0.0.1:8000/api/groups/")
                 .then(response => {
                     const groups = response.data;
                     groups.forEach((group) => console.log(group))
@@ -29,15 +29,16 @@ function App() {
             'ws://'
             + window.location.host
             + '/ws/chat/group/'
-            + roomName
-            + '/'
         );
     }, [])
 
     useEffect(() => {
         socket.current.onopen = function (e) {
             console.log("WebSocket Opened Successfully...")
-            // fetchMessage();
+            // setTimeout(() => {
+            //     console.log("Sending fetch_message request.........");
+            //     fetchMessage()
+            // }, 2000)
         }
 
         socket.current.onclose = function (e) {
@@ -46,7 +47,10 @@ function App() {
 
         function fetchMessage() {
             socket.current.send(JSON.stringify({
-                'command': 'fetch_messages'
+                'command': 'fetch_messages',
+                'group_slug': 'second-group',
+                'from': username,
+                'content': "Hey abdullahadeel from front-end",
             }))
         }
 
@@ -54,9 +58,9 @@ function App() {
             console.log('Received Messages');
             const data = JSON.parse(e.data);
             console.log(data)
-            if (data['command'] === 'recent_messages') {
-                setOldMessages(data['messages'])
-            }
+            // if (data['command'] === 'recent_messages') {
+            //     setOldMessages(data['messages'])
+            // }
         }
 
     }, [socket])
@@ -74,4 +78,4 @@ function App() {
     )
 }
 
-export default App
+export default App;

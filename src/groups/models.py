@@ -32,16 +32,16 @@ class Group(models.Model):
     last_editted = models.DateTimeField(auto_now=True)
 
     # chaeck if the user is the creator of the group
-    def is_creator(self, pk, username):
-        group = Group.objects.get(pk=pk)
-        if group.creator.username == username:
+    def is_creator(self, slug, username):
+        group = Group.objects.get(slug=slug)
+        if group.creator.user.username == username:
             return True
         else:
             return False
 
     # get the name of the creator so that it can be sent to client via API
     def get_creator_name(self):
-        return self.creator.username
+        return self.creator.user.username
 
     # peventing the over-riding of slug field at the profile edits
     __initial_group_name = None
@@ -87,3 +87,7 @@ class GroupMessage(models.Model):
         Profile, related_name="author", on_delete=models.CASCADE)
     content = models.TextField(max_length=1000)
     created = models.DateTimeField(auto_now_add=True)
+
+    def fetch_last_10_messages(slug):
+        messages = GroupMessage.objects.filter(group_relation=slug)
+        return messages

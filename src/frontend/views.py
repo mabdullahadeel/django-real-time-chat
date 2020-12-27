@@ -1,15 +1,16 @@
 from django.shortcuts import render
-
-# Create your views here.
-
-
-def index(request):
-    return render(request, 'chat/index.html')
+from django.shortcuts import get_object_or_404
+from profiles.models import Profile
+from django.http import HttpResponse, JsonResponse
 
 
-def room(request, room_name):
+def get_user_data_chat_frontend(request):
+    #  getting the user from the profile to send the user data
+    profile = get_object_or_404(Profile, user__username=request.user.username)
     context = {
-        "room_name": room_name,
-        'username': request.user.username
+        'username': request.user.username,
+        'slug': profile.slug,
     }
+
+    # return JsonResponse(context, safe=False)
     return render(request, 'frontend/index.html', context=context)
