@@ -44,15 +44,25 @@ class GroupChatConsumer(WebsocketConsumer, HandleCustomGroupChatMethods):
 
     # Receiving messages through websocket
     def fetch_messages(self, data):
-        messages = GroupMessage.fetch_last_10_messages(
-            data['group_slug'])
-        content = {
-            'command': "fetch_messages",
-            'messages': self.messages_to_json(messages=messages)
-        }
-        self.send_messages(content=content)
+        if 'group_slug' in data:
+            messages = GroupMessage.objects.fetch_last_10_messages(
+                data['group_slug'])
+            content = {
+                'command': "fetch_messages",
+                'messages': self.messages_to_json(messages=messages)
+            }
+            self.send_messages(content=content)
+        else:
+            user = self.scope['user']
+            user_groups = Group.objects.get_groups_of_user(user=user)
+            if user_groups.exists():
+                content = {
+                    'command': "all_user_group_messages",
+                    'payload': self.user_groups_response(user_groups)
+                }
+                # Echo back to the same client
+                self.send_messages(content=content)
 
-    # Echo back to the same client
     def send_messages(self, content):
         self.send(text_data=json.dumps(content))
 
@@ -103,7 +113,4 @@ class GroupChatConsumer(WebsocketConsumer, HandleCustomGroupChatMethods):
 
     def receive(self, text_data):
         data = json.loads(text_data)
-        print()
-        print("This is received data", data)
-        print()
         self.commands[data['command']](self, data)

@@ -2,6 +2,10 @@
 
 /*! dynamic exports */
 
+/*! export AsyncMode [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export AsyncMode [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .AsyncMode */
+
 /*! export Children [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export Children [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .Children */
@@ -10,25 +14,85 @@
 
 /*! export Component [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .Component */
 
+/*! export ConcurrentMode [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export ConcurrentMode [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .ConcurrentMode */
+
+/*! export ContextConsumer [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export ContextConsumer [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .ContextConsumer */
+
+/*! export ContextProvider [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export ContextProvider [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .ContextProvider */
+
+/*! export Element [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export Element [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .Element */
+
+/*! export ForwardRef [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export ForwardRef [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .ForwardRef */
+
 /*! export Fragment [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export Fragment [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .Fragment */
 
 /*! export Fragment [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .Fragment */
 
+/*! export GET_USER_GROUPS_URL [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export Immer [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export Lazy [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export Lazy [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .Lazy */
+
+/*! export MEDIA_BASE_URL [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export Memo [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export Memo [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .Memo */
+
+/*! export MiddlewareArray [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export Portal [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export Portal [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .Portal */
+
 /*! export Profiler [provided] [no usage info] [missing usage info prevents renaming] */
 
+/*! export Profiler [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .Profiler */
+
 /*! export Profiler [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .Profiler */
+
+/*! export Provider [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/components/Provider.js .default */
 
 /*! export PureComponent [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export PureComponent [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .PureComponent */
 
+/*! export ReactReduxContext [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export ReactReduxContext [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/components/Context.js .ReactReduxContext */
+
 /*! export StrictMode [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export StrictMode [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .StrictMode */
 
 /*! export StrictMode [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .StrictMode */
 
 /*! export Suspense [provided] [no usage info] [missing usage info prevents renaming] */
 
+/*! export Suspense [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .Suspense */
+
 /*! export Suspense [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .Suspense */
+
+/*! export WEB_SOCKET_URL [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export __DO_NOT_USE__ActionTypes [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export __DO_NOT_USE__ActionTypes [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/redux/es/redux.js .__DO_NOT_USE__ActionTypes */
 
 /*! export __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED [provided] [no usage info] [missing usage info prevents renaming] */
 
@@ -40,35 +104,135 @@
 
 /*! export __esModule [not provided] [no usage info] [missing usage info prevents renaming] */
 
+/*! export addNewMessage [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export applyMiddleware [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export applyMiddleware [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/redux/es/redux.js .applyMiddleware */
+
+/*! export applyPatches [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export batch [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-dom/cjs/react-dom.production.min.js .unstable_batchedUpdates */
+
+/*! export bindActionCreators [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export bindActionCreators [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/redux/es/redux.js .bindActionCreators */
+
+/*! export castDraft [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export castImmutable [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export chatSlice [provided] [no usage info] [missing usage info prevents renaming] */
+
 /*! export cloneElement [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export cloneElement [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .cloneElement */
+
+/*! export combineReducers [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export combineReducers [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/redux/es/redux.js .combineReducers */
+
+/*! export compose [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export compose [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/redux/es/redux.js .compose */
+
+/*! export configureStore [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export connect [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/connect/connect.js .default */
+
+/*! export connectAdvanced [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/components/connectAdvanced.js .default */
+
+/*! export createAction [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createAsyncThunk [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createConnect [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export createContext [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export createContext [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .createContext */
 
+/*! export createDispatchHook [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createDispatchHook [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/hooks/useDispatch.js .createDispatchHook */
+
+/*! export createDraft [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createDraftSafeSelector [provided] [no usage info] [missing usage info prevents renaming] */
+
 /*! export createElement [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export createElement [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .createElement */
+
+/*! export createEntityAdapter [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export createFactory [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export createFactory [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .createFactory */
 
+/*! export createImmutableStateInvariantMiddleware [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createNextState [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/immer/dist/immer.esm.js .default */
+
 /*! export createPortal [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export createPortal [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-dom/cjs/react-dom.production.min.js .createPortal */
+
+/*! export createReducer [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export createRef [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export createRef [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .createRef */
 
+/*! export createSelector [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createSelector [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/reselect/es/index.js .createSelector */
+
+/*! export createSelectorCreator [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createSelectorHook [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createSelectorHook [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/hooks/useSelector.js .createSelectorHook */
+
+/*! export createSerializableStateInvariantMiddleware [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createSlice [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createStore [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createStore [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/redux/es/redux.js .createStore */
+
+/*! export createStoreHook [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export createStoreHook [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/hooks/useStore.js .createStoreHook */
+
+/*! export createStructuredSelector [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export current [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export current [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/immer/dist/immer.esm.js .current */
+
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export defaultMemoize [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export defaultMergeProps [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export enableAllPlugins [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export enableES5 [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export enableMapSet [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export enablePatches [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export findDOMNode [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export findDOMNode [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-dom/cjs/react-dom.production.min.js .findDOMNode */
+
+/*! export findNonSerializableValue [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export finishDraft [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export flushSync [provided] [no usage info] [missing usage info prevents renaming] */
 
@@ -78,13 +242,109 @@
 
 /*! export forwardRef [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .forwardRef */
 
+/*! export freeze [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export freeze [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/immer/dist/immer.esm.js .freeze */
+
+/*! export getBatch [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export getDefaultMiddleware [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export getDependsOnOwnProps [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export getType [provided] [no usage info] [missing usage info prevents renaming] */
+
 /*! export hydrate [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export hydrate [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-dom/cjs/react-dom.production.min.js .hydrate */
 
+/*! export immerable [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export impureFinalPropsSelectorFactory [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isAllOf [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isAnyOf [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isAsyncMode [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isAsyncMode [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isAsyncMode */
+
+/*! export isAsyncThunkAction [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isConcurrentMode [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isConcurrentMode [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isConcurrentMode */
+
+/*! export isContextConsumer [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isContextConsumer [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isContextConsumer */
+
+/*! export isContextProvider [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isContextProvider [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isContextProvider */
+
+/*! export isDraft [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isDraftable [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isElement [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isElement [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isElement */
+
+/*! export isForwardRef [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isForwardRef [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isForwardRef */
+
+/*! export isFragment [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isFragment [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isFragment */
+
+/*! export isFulfilled [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isImmutableDefault [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isLazy [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isLazy [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isLazy */
+
+/*! export isMemo [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isMemo [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isMemo */
+
+/*! export isPending [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isPlain [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isPlainObject [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isPortal [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isPortal [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isPortal */
+
+/*! export isProfiler [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isProfiler [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isProfiler */
+
+/*! export isRejected [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isRejectedWithValue [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isStrictMode [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isStrictMode [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isStrictMode */
+
+/*! export isSuspense [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isSuspense [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isSuspense */
+
 /*! export isValidElement [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export isValidElement [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .isValidElement */
+
+/*! export isValidElementType [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export isValidElementType [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .isValidElementType */
 
 /*! export lazy [provided] [no usage info] [missing usage info prevents renaming] */
 
@@ -94,9 +354,51 @@
 
 /*! export memo [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .memo */
 
+/*! export nanoid [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export nothing [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export original [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export produce [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export produceWithPatches [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export pureFinalPropsSelectorFactory [provided] [no usage info] [missing usage info prevents renaming] */
+
 /*! export render [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export render [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-dom/cjs/react-dom.production.min.js .render */
+
+/*! export selectAllChats [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export selectAllMessages [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export selectCurrentChat [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export selectCurrentMessages [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export selectUser [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export setAllChats [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export setAllMessages [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export setAutoFreeze [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export setBatch [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export setCurrentChat [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export setUseProxies [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export setUserData [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export shallowEqual [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/utils/shallowEqual.js .default */
+
+/*! export typeOf [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export typeOf [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-is/cjs/react-is.production.min.js .typeOf */
 
 /*! export unmountComponentAtNode [provided] [no usage info] [missing usage info prevents renaming] */
 
@@ -127,6 +429,8 @@
 /*! export unstable_UserBlockingPriority [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/scheduler/cjs/scheduler.production.min.js .unstable_UserBlockingPriority */
 
 /*! export unstable_batchedUpdates [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export unstable_batchedUpdates [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-dom/cjs/react-dom.production.min.js .unstable_batchedUpdates */
 
 /*! export unstable_batchedUpdates [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-dom/cjs/react-dom.production.min.js .unstable_batchedUpdates */
 
@@ -190,6 +494,8 @@
 
 /*! export unstable_wrapCallback [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/scheduler/cjs/scheduler.production.min.js .unstable_wrapCallback */
 
+/*! export unwrapResult [provided] [no usage info] [missing usage info prevents renaming] */
+
 /*! export useCallback [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export useCallback [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .useCallback */
@@ -202,6 +508,10 @@
 
 /*! export useDebugValue [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .useDebugValue */
 
+/*! export useDispatch [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export useDispatch [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/hooks/useDispatch.js .useDispatch */
+
 /*! export useEffect [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export useEffect [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .useEffect */
@@ -209,6 +519,8 @@
 /*! export useImperativeHandle [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export useImperativeHandle [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .useImperativeHandle */
+
+/*! export useIsomorphicLayoutEffect [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export useLayoutEffect [provided] [no usage info] [missing usage info prevents renaming] */
 
@@ -222,19 +534,51 @@
 
 /*! export useReducer [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .useReducer */
 
+/*! export useReduxContext [provided] [no usage info] [missing usage info prevents renaming] */
+
 /*! export useRef [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export useRef [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .useRef */
 
+/*! export useSelector [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export useSelector [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/hooks/useSelector.js .useSelector */
+
 /*! export useState [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export useState [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .useState */
+
+/*! export useStore [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export useStore [provided] [no usage info] [missing usage info prevents renaming] -> ./node_modules/react-redux/es/hooks/useStore.js .useStore */
+
+/*! export userSlice [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export version [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! export version [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react-dom/cjs/react-dom.production.min.js .version */
 
 /*! export version [provided] [no usage info] [provision prevents renaming (no use info)] -> ./node_modules/react/cjs/react.production.min.js .version */
+
+/*! export whenMapDispatchToPropsIsFunction [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export whenMapDispatchToPropsIsMissing [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export whenMapDispatchToPropsIsObject [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export whenMapStateToPropsIsFunction [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export whenMapStateToPropsIsMissing [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export whenMergePropsIsFunction [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export whenMergePropsIsOmitted [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export wrapMapToPropsConstant [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export wrapMapToPropsFunc [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! export wrapMergePropsFunc [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! exports [not provided] [no usage info] */
 
@@ -248,13 +592,25 @@
 
 /*! runtime requirements: __webpack_exports__, __webpack_require__ */
 
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.d, __webpack_require__.r, __webpack_require__.* */
+
 /*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 
 /*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 
 /*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_exports__, __webpack_require__.r, module.id, __webpack_require__.d, __webpack_require__.*, module */
 
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__, module.loaded, module.id, module, __webpack_require__.hmd, __webpack_exports__, __webpack_require__.r, __webpack_require__.g, __webpack_require__.d, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 
 /*! runtime requirements: module */
 
@@ -276,12 +632,32 @@
   !*** ./src/Css/chat.css ***!
   \**************************/
 
+/*!****************************!*\
+  !*** ./src/redux/store.js ***!
+  \****************************/
+
+/*!********************************!*\
+  !*** ./src/hooks/useSocket.js ***!
+  \********************************/
+
+/*!**********************************!*\
+  !*** ./src/utils/getUserData.js ***!
+  \**********************************/
+
 /*!***********************************!*\
   !*** ./src/components/Sidebar.js ***!
   \***********************************/
 
+/*!***********************************!*\
+  !*** ./src/utils/getUserChats.js ***!
+  \***********************************/
+
 /*!************************************!*\
   !*** ./src/components/ChatArea.js ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/configurations/urls.js ***!
   \************************************/
 
 /*!*************************************!*\
@@ -291,6 +667,14 @@
 /*!*************************************!*\
   !*** ./node_modules/react/index.js ***!
   \*************************************/
+
+/*!****************************************!*\
+  !*** ./node_modules/react-is/index.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./node_modules/redux/es/redux.js ***!
+  \****************************************/
 
 /*!*****************************************!*\
   !*** ./node_modules/axios/lib/axios.js ***!
@@ -308,6 +692,22 @@
   !*** ./node_modules/scheduler/index.js ***!
   \*****************************************/
 
+/*!*****************************************!*\
+  !*** ./src/redux/features/chatSlice.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/redux/features/userSlice.js ***!
+  \*****************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/prop-types/index.js ***!
+  \******************************************/
+
+/*!*******************************************!*\
+  !*** ./node_modules/reselect/es/index.js ***!
+  \*******************************************/
+
 /*!********************************************!*\
   !*** ./node_modules/axios/lib/defaults.js ***!
   \********************************************/
@@ -318,6 +718,18 @@
 
 /*!**********************************************!*\
   !*** ./node_modules/axios/lib/core/Axios.js ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/immer/dist/immer.esm.js ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/react-redux/es/index.js ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/redux-thunk/es/index.js ***!
   \**********************************************/
 
 /*!***********************************************!*\
@@ -360,6 +772,14 @@
   !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
   \****************************************************/
 
+/*!****************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/batch.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/symbol-observable/es/index.js ***!
+  \****************************************************/
+
 /*!*****************************************************!*\
   !*** ./node_modules/axios/lib/core/enhanceError.js ***!
   \*****************************************************/
@@ -380,8 +800,20 @@
   !*** ./node_modules/axios/lib/core/transformData.js ***!
   \******************************************************/
 
+/*!******************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/warning.js ***!
+  \******************************************************/
+
 /*!*******************************************************!*\
   !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useStore.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/symbol-observable/es/ponyfill.js ***!
   \*******************************************************/
 
 /*!********************************************************!*\
@@ -393,12 +825,24 @@
   \********************************************************/
 
 /*!********************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/connect.js ***!
+  \********************************************************/
+
+/*!********************************************************!*\
   !*** ./node_modules/react/cjs/react.production.min.js ***!
   \********************************************************/
 
 /*!*********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
   \*********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useDispatch.js ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useSelector.js ***!
+  \**********************************************************/
 
 /*!***********************************************************!*\
   !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
@@ -408,8 +852,56 @@
   !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
   \***********************************************************/
 
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/components/Context.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mergeProps.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/Subscription.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/shallowEqual.js ***!
+  \***********************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/react-redux/es/components/Provider.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/isPlainObject.js ***!
+  \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/prop-types/factoryWithThrowingShims.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \*************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./node_modules/react-is/cjs/react-is.production.min.js ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useReduxContext.js ***!
+  \**************************************************************/
+
 /*!***************************************************************!*\
   !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/wrapMapToProps.js ***!
   \***************************************************************/
 
 /*!****************************************************************!*\
@@ -421,9 +913,53 @@
   \****************************************************************/
 
 /*!****************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mapStateToProps.js ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/selectorFactory.js ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/verifyPlainObject.js ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
   !*** ./node_modules/scheduler/cjs/scheduler.production.min.js ***!
   \****************************************************************/
+
+/*!*****************************************************************!*\
+  !*** ./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js ***!
+  \*****************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/reactBatchedUpdates.js ***!
+  \******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/components/connectAdvanced.js ***!
+  \*******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mapDispatchToProps.js ***!
+  \*******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/verifySubselectors.js ***!
+  \*******************************************************************/
+
+/*!************************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js ***!
+  \************************************************************************/
 
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
   \****************************************************************************/
+
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*********************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
+  \**********************************************************************************/

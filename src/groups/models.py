@@ -80,6 +80,12 @@ class GroupMembership(models.Model):
         unique_together = [['group', 'profile']]
 
 
+class GroupMessageManager(models.Manager):
+    def fetch_last_10_messages(self, slug):
+        messages = GroupMessage.objects.filter(group_relation=slug)
+        return messages
+
+
 class GroupMessage(models.Model):
     group_relation = models.ForeignKey(
         Group, on_delete=models.CASCADE, related_name="group_relation", to_field="slug")
@@ -88,6 +94,5 @@ class GroupMessage(models.Model):
     content = models.TextField(max_length=1000)
     created = models.DateTimeField(auto_now_add=True)
 
-    def fetch_last_10_messages(slug):
-        messages = GroupMessage.objects.filter(group_relation=slug)
-        return messages
+    # Custom Manager
+    objects = GroupMessageManager()

@@ -1,4 +1,5 @@
 import json
+from .models import GroupMessage
 
 
 class HandleCustomGroupChatMethods:
@@ -12,5 +13,14 @@ class HandleCustomGroupChatMethods:
         return {
             'author': message.author.user.username,
             'content': message.content,
-            'group_slug': message.group_relation.slug
+            'group_slug': message.group_relation.slug,
         }
+
+    def user_groups_response(self, groups_of_user):
+        response = {}
+        for group in groups_of_user:
+            group_messages = GroupMessage.objects.fetch_last_10_messages(
+                group.slug)
+            response[group.slug] = self.messages_to_json(group_messages)
+
+        return response

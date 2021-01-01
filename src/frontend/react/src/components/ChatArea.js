@@ -1,20 +1,29 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
+import { MEDIA_BASE_URL } from '../configurations/urls';
 import '../Css/chat.css';
 
-function ChatArea({ oldMessages, username, currentSocket }) {
-    const message = useRef('')
+import { useSelector } from 'react-redux';
+import { selectCurrentChat, selectCurrentMessages } from '../redux/features/chatSlice';
+import { selectUser } from '../redux/features/userSlice';
+
+function ChatArea({ currentSocket }) {
+    const message = useRef('');
+    const currentChat = useSelector(selectCurrentChat);
+    const currentMessages = useSelector(selectCurrentMessages);
+    const user = useSelector(selectUser);
 
     const sendMessage = () => {
         if (message.current) {
             currentSocket.send(JSON.stringify({
-                'message': message.current,
+                'content': message.current,
                 'command': 'new_message',
-                'from': username
+                'group_slug': currentChat.slug,
+                'from': user.username
             }));
             message.current = '';
             document.getElementById("chat-message-input").value = "";
         } else {
-            return
+            return null
         }
     }
 
@@ -35,42 +44,19 @@ function ChatArea({ oldMessages, username, currentSocket }) {
         window.removeEventListener("keyup", enterEvent);
     }
 
-    currentSocket.onmessage = function (e) {
-        const data = JSON.parse(e.data);
-        if (data['command'] === 'new_message') {
-            console.log(data);
-
-            const author = data.message.author;
-            const msgTagList = document.createElement('li');
-            const imageTag = document.createElement('img');
-            const pTag = document.createElement('p');
-            pTag.textContent = data.message.content;
-            imageTag.src = 'http://emilcarlsson.se/assets/mikeross.png';
-
-            console.log(author, username)
-
-            if (author === username) {
-                msgTagList.className = 'replies';
-            } else {
-                msgTagList.className = 'sent';
-            }
-
-            msgTagList.appendChild(imageTag);
-            msgTagList.appendChild(pTag);
-
-            document.querySelector('#chat-log').appendChild(msgTagList);
-
-            $(".messages").animate({ scrollTop: $(document).height() }, "fast");
-        }
-    }
-
-
     return (
         <>
             <div className="content">
                 <div className="contact-profile">
-                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                    <p>Harvey Specter</p>
+                    <img src={
+                        user?.profile_pic ?
+                            `${MEDIA_BASE_URL}${user.profile_pic}`
+                            :
+                            `${MEDIA_BASE_URL}default_avatar.png`
+
+                    } alt="default-profile-picture" />
+                    {/* <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" /> */}
+                    <p>{currentChat?.group_name}</p>
                     <div className="social-media">
                         <i className="fa fa-facebook" aria-hidden="true"></i>
                         <i className="fa fa-twitter" aria-hidden="true"></i>
@@ -79,17 +65,8 @@ function ChatArea({ oldMessages, username, currentSocket }) {
                 </div>
                 <div className="messages">
                     <ul id="chat-log">
-                        <li className="sent">
-                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
-                            <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!
-                        </p>
-                        </li>
-                        <li className="replies">
-                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                            <p>When you're backed against the wall, break the god damn thing down.</p>
-                        </li>
-                        {oldMessages.map((message) => (
-                            <li className={message.author === username ? "replies" : "sent"}>
+                        {currentMessages?.map((message) => (
+                            <li className={message.author === user.username ? "replies" : "sent"}>
                                 <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
                                 <p>{message.content}</p>
                             </li>

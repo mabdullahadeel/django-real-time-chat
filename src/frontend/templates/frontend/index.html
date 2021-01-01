@@ -34,11 +34,11 @@
 <body>
     {{ username|json_script:"username" }}
     {{ slug|json_script:"slug" }}
+    {{ profile_picture|json_script:"profile_picture" }}
     <div id='reactapp'></div>
 
     <!-- Custom JS Powered By REACT-->
     <script src="{% static 'frontend/main.js' %}"></script>
-    <!-- Scripts From Chat HTML -->
 </body>
 
 </html>

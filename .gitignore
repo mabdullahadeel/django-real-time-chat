@@ -6,7 +6,6 @@
 # custom git IGNORES
 src/frontend/react/node_modules
 env/
-static_cdn/avatars
 src/db.sqlite3
 
 # Node artifact files

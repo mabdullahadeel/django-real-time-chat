@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from profiles.models import Profile
 from django.http import HttpResponse, JsonResponse
+import json
 
 
 def get_user_data_chat_frontend(request):
@@ -10,6 +11,7 @@ def get_user_data_chat_frontend(request):
     context = {
         'username': request.user.username,
         'slug': profile.slug,
+        'profile_picture': json.dumps(str(profile.profile_picture))
     }
 
     # return JsonResponse(context, safe=False)
