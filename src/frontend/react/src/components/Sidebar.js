@@ -66,7 +66,9 @@ function Sidebar() {
                                     <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
                                     <div className="meta">
                                         <p className="name">{group.group_name}</p>
-                                        <p className="preview">{allMessages && allMessages[group.slug][allMessages[group.slug].length - 1].content}</p>
+                                        <p className="preview">
+                                            {allMessages && (allMessages[group.slug][allMessages[group.slug].length - 1]?.content)}
+                                        </p>
                                     </div>
                                 </div>
                             </li>
